@@ -1,0 +1,25 @@
+{
+  "name": "bank_account_manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meirsilverman2-debug/Bank_Account_Manager.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/meirsilverman2-debug/Bank_Account_Manager/issues"
+  },
+  "homepage": "https://github.com/meirsilverman2-debug/Bank_Account_Manager#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
