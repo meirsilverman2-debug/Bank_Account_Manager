@@ -114,20 +114,23 @@ export function withdraw(customerID, amount) {
 
 
 // 5. Search Customer:
-export function searchCustomer(customerID = 0) {
 
-    let account = null
-    bankAccounts.forEach((bankAccount) => {
-        if (bankAccount.id === customerID) {
-            account = bankAccount
-        }
-    })
 
-    if (account === null) {
-        account = `there is not any account with the ID ${customerID}`
-    }
-    return account
-}
+// export function searchCustomer(customerID = 0) {
+
+//     let account = null
+//     bankAccounts.find((bankAccount) => {
+//         if (bankAccount.id === customerID) {
+//             account = bankAccount
+//             return b
+//         }
+//     })
+
+//     if (account === null) {
+//         account = `there is not any account with the ID ${customerID}`
+//     }
+//     return account
+// }
 
 // This is also for testing
 // const result = searchCustomer()
@@ -137,6 +140,15 @@ export function searchCustomer(customerID = 0) {
 // CreateCustomer("Meir", "Regular", 100)
 // console.log(bankAccounts)
 
+// improved version that use find method
+export function searchCustomer(customerID) {
+    const response = bankAccounts.find((bankAccount) => { return bankAccount.id === customerID })
+    if (response) {
+        return response
+    } else {
+        return `there is not any account with the ID ${customerID}`
+    }
+}
 
 
 // 6. Close Account:
