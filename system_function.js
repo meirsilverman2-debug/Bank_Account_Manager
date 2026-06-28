@@ -195,7 +195,7 @@ export function showStatistics() {
     })
 
     let bankAccounts2 = [...bankAccounts].sort((a, b) => a.balance - b.balance);
-    statistics.Highest_Balance = bankAccounts2.pop(bankAccounts2.balance);
+    statistics.Highest_Balance = bankAccounts2[bankAccounts2.length -1].balance;
 
 
     return statistics;
